@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $_SESSION['pag']= 3;
+    $_SESSION['page']= 3;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -63,6 +65,10 @@
                         include('conexion.php');//esta consulta sirve para imprimir el titulo
                         if(isset($_POST['id_blog'])){
                             $_SESSION['id-blog']=$_POST['id_blog'];
+                        }
+                        if(!isset($_SESSION['id-blog'])){
+                            header('location:index.php');
+                            exit();
                         }
                         $id=$_SESSION['id-blog'];
                         $query="SELECT* FROM blogs WHERE id=:id";

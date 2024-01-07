@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $_SESSION['pag']= 2;
+    $_SESSION['page']= 2;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -16,9 +18,9 @@
         case 'opcion1':
           break;
         case 'opcion2':
-            window.location.href = '';
+            window.location.href = 'perfil.php';
           break;
-        case 'Explorar':
+        case 'Blogs':
             window.location.href = 'blogs.php';
             break;
         case 'Cerrar-sesion':

@@ -28,7 +28,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $_SESSION['nombre']=$registro['nombre'];
                     $_SESSION['Correo']=$registro['correo'];
                     $_SESSION['imagen']=$registro['foto'];
-                    header("location:index.php");
+                    if(isset( $_SESSION['pag'])){
+                        switch( $_SESSION['pag']){
+                            case 2:
+                                header  ("location:explorar.php");
+                                break;
+                            case 3:
+                                header  ("location:blog.php");
+                                break;
+                            default:
+                                header("location:index.php");
+                                break;
+                        }
+                    }
+                    
                 }
             } else {
                 echo '<center> <p class="error">Contraseña o correo electrónico incorrectos</p> </center>';

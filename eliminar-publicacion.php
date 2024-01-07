@@ -3,6 +3,8 @@
     if(!isset($_SESSION['id'])){
         header('location:index.php');
     }
+    $_SESSION['pag']= 7;
+    $_SESSION['page']= 7;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -19,7 +21,7 @@
         case 'opcion1':
           break;
         case 'opcion2':
-            window.location.href = '';
+            window.location.href = 'perfil.php';
           break;
         case 'Explorar':
             window.location.href = 'Explorar.php';
@@ -75,11 +77,16 @@
                                 echo '<h3>'.$registro["nombre"].'</h3>';
                             }
                         }
+                        $id_publicacion=$_POST['id_publicacion'];
+                         if($id_publicacion==null){
+                            header('location:blog.php');
+                            exit();
+                         }
                     ?>
-            
+
                     <form class="cont-5" method="POST" action="procesar-eliminar-publicacion.php">
                         <p class="text-2">¿Seguro qué quiere eliminar este post?</p>
-                        <input type="hidden" name="id-publicacion" value="<?php echo $_POST['id_publicacion']?>">
+                        <input type="hidden" name="id-publicacion" value="<?php echo $id_publicacion;?>">
                         <div class="eliminacion">
                             <button class="boton-1" name="accion" value="cancelar">cancelar</button>
                             <button class="boton-2" name="accion" value="eliminar">eliminar</button>

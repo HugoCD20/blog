@@ -52,6 +52,9 @@ if(isset($verifica)){
         header('location:blog.php');
     }
 }
+ }else{
+    header('location:index.php');
+
  }
 
 

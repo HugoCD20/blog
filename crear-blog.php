@@ -3,6 +3,8 @@
     if(!isset($_SESSION['id'])){
         header('location:index.php');
     }
+    $_SESSION['pag']= 4;
+    $_SESSION['page']= 4;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -19,7 +21,7 @@
         case 'opcion1':
           break;
         case 'opcion2':
-            window.location.href = '';
+            window.location.href = 'perfil.php';
           break;
         case 'Blogs':
             window.location.href = 'blogs.php';

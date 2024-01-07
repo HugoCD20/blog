@@ -3,6 +3,7 @@
     if(!isset($_SESSION['id'])){
         header('location:index.php');
     }
+    $_SESSION['page']=8;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -39,7 +40,36 @@
              }
         ?>
         <div class="cont-3">
-                <a class="regreso" href="login.php">
+            <?php
+                if(isset($_SESSION['pag'])){
+                    switch($_SESSION['pag']){
+                        case 1:
+                            echo '<a class="regreso" href="index.php">';
+                            break;
+                        case 2:
+                            echo '<a class="regreso" href="explorar.php">';
+                            break;
+                        case 3:
+                            echo '<a class="regreso" href="blog.php">';
+                            break;
+                        case 4:
+                            echo '<a class="regreso" href="crear-blog.php">';
+                            break;
+                        case 5:
+                            echo '<a class="regreso" href="crear-publicacion.php">';
+                            break;
+                        case 6:
+                            echo '<a class="regreso" href="modificar-publicacion.php">';
+                            break;
+                        case 7:
+                            echo '<a class="regreso" href="eliminar-publicacion.php">';
+                            break;
+                        case 8:
+                            echo '<a class="regreso" href="blogs.php">';
+                            break;
+                    }
+                }
+            ?>
                     <img class="img-2" src="image/regreso.png" alt="regreso">
                 </a>
                 <h5 class="title-5">Perfil</h5>

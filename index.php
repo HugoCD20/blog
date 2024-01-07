@@ -1,5 +1,7 @@
 <?php
 session_start();
+$_SESSION['pag']=1;
+$_SESSION['page']=1;
 ?>
 <!DOCTYPE html>
 <html lang="es">

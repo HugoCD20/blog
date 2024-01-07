@@ -21,7 +21,22 @@
     </header>
     <main>
         <div class="cont-3">
-                <a class="regreso" href="index.php">
+            <?php
+            if(isset( $_SESSION['pag'])){
+                switch( $_SESSION['pag']){
+                    case 2:
+                        echo '<a class="regreso" href="explorar.php">';
+                        break;
+                    case 3:
+                        echo '<a class="regreso" href="blog.php">';
+                        break;
+                    default:
+                        echo '<a class="regreso" href="index.php">';
+                        break;
+                }
+            }
+            ?>
+                
                     <img class="img-2" src="image/regreso.png" alt="regreso">
                 </a>
                 <h5>Iniciar sesión</h5>

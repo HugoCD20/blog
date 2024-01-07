@@ -3,6 +3,8 @@
     if(!isset($_SESSION['id'])){
         header('location:index.php');
     }
+    $_SESSION['pag']= 5;
+    $_SESSION['page']= 5;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -19,7 +21,7 @@
         case 'opcion1':
           break;
         case 'opcion2':
-            window.location.href = '';
+            window.location.href = 'perfil.php';
           break;
         case 'Explorar':
             window.location.href = 'Explorar.php';

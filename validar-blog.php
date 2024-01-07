@@ -28,7 +28,7 @@
                         $consulta3->bindParam(':id',$id);
                         $consulta3->bindParam(':cantidad',$cantidad);
                         $consulta3->execute();
-                        header('location:blog.php');
+                        header('location:blogs.php');
                         exit();
                     }
                 }
