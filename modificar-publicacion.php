@@ -94,7 +94,7 @@
                         <textarea class="text-box2" name="texto"><?php echo $texto;?></textarea>
                         
                         <label for="foto">Ingresa una foto(opcional):</label>
-                        <input type="file" name="imagen" accept="image/*">
+                        <input class="input" type="file" name="imagen" accept="image/*">
 
                         <input type="hidden" name='id_publicacion' value="<?php echo $_POST['id_publicacion']?>">
 

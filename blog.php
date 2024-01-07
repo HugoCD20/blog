@@ -80,9 +80,9 @@
                         if(isset($_SESSION['id']) && $_SESSION['id']==$id_usuario){
                             echo "
                             <form class='publicacion' method='POST' action='Crear-publicacion.php'>
-                                <div class='imagen-1'>
+                                <div class='imagen-4'>
                                     <img class='img-3' src='$_SESSION[imagen]' alt='perfil'>
-                                </div>;
+                                </div>
                                 <div class='post'>
                                     <p>¡Bienvenido! ¿Quieres hacer un nuevo post?</p>
                                     <input type='hidden' name='id_blog' value='$id'>
@@ -112,7 +112,7 @@
                                 echo'<p class="text-3">'.$texto.'</p>';
                                 echo "
                                 <form class='publicacion' method='POST' action='hacer-comentario.php'>
-                                    <div class='imagen-1'>";
+                                    <div class='imagen-4'>";
                                     if(isset($_SESSION['id'])){
                                         echo "<img class='img-3' src='$_SESSION[imagen]' alt='perfil'>";
                                     }else{
@@ -121,7 +121,7 @@
                                     echo "</div>
                                     <div class='post'>
                                         <input type='hidden' name='id_blog' value='$registro2[id]'>
-                                        <label for='comentario'>Comentar:</label>
+                                        <label for='comentario' class='comenta'>Comentar:</label>
                                         <input class='text-box-2' type='text' id='comentario' name='comentario'>
                                         <button class='boton-4'>añadir comentario</button>
                                     </div>                        
@@ -141,7 +141,7 @@
                                             while ($registro4 = $consulta4->fetch(PDO::FETCH_ASSOC)) {
                                                 echo "
                                                     <form class='publicacion-2' method='POST' action='elimimar-comentario.php'>
-                                                        <div class='imagen-1'>";
+                                                        <div class='imagen-4'>";
                                                             echo "<img class='img-3' src='$registro4[foto]' alt='perfil'>";
                                                         echo "</div>
                                                         <input type='hidden' name='id_comentario' value='$registro3[id]'>
@@ -149,7 +149,7 @@
                                                             <p> $registro4[nombre] <br> $registro3[comentario]</p>
                                                         </div>";  
                                                     if(isset($_SESSION['id']) && $_SESSION['id']==$registro4['id']){
-                                                        echo "<button class='boton-4'>eliminar</button>";
+                                                        echo "<button class='boton-5'>eliminar</button>";
                                                     }
                                                     echo "</form>
                                                     ";

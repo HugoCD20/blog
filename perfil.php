@@ -61,7 +61,7 @@
                     
                     <div>
                     <label  for="imagen">Foto de perfil:</label></div>
-                    <input style="margin-top:1rem;" type="file" id="foto" name="imagen" accept="image/*"><br>    
+                    <input class="input" style="margin-top:1rem;" type="file" id="foto" name="imagen" accept="image/*"><br>    
                     <center style="margin-top:1rem;"><input class="button-5" type="submit" value="Actualizar"></center>
                     
                     <?php 

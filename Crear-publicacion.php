@@ -109,7 +109,7 @@
                         ?>
 
                         <label for="foto">Ingresa una foto(opcional):</label>
-                        <input type="file" name="imagen" accept="image/*">
+                        <input class="input" type="file" name="imagen" accept="image/*">
 
                         <center style="margin-top:1rem;"><input class="button-5" type="submit" value="Crear"></center>
                         <?php 
