@@ -492,6 +492,175 @@ footer{
    font-size: x-small;
    height: 2rem;
 }
-
-
 }
+@media (min-width: 281px) and (max-width: 767px) {
+   /*aqui empieza el header*/
+   h1{
+      font-size: medium;
+   }
+   h2{
+      font-size: small;
+   }
+   .img-1 {
+      width: 2rem;
+      height: 2rem;
+      margin-left: 1%;
+   }
+   .seleccion-1{
+      font-size: medium;
+   }
+   .imagen-1{
+      width: 1.5rem;
+      height: 1.5rem;
+   }
+   /*aqui empieza el main*/
+   .introduccion{
+      width: 100%;
+   }
+   .imagen-2 {
+      width: 25%;
+   }
+   .text-1 {
+      font-size: small;
+      line-height: 1;
+      margin-right: 9%;
+      margin-left: 9%;
+   }
+   h4{
+      font-size: small;
+      text-align: center;
+   }
+   .titulo-1{
+      flex-direction: column;
+      max-height: 100%;
+      align-items: center;
+   }
+   .boton-1,.boton-2{
+      font-size: small;
+      width: 25%;
+       height: 2rem;
+   
+   }
+   h5{
+      font-size: large;
+   }
+   .img-2 {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 60%;
+   }
+   .form-1 {
+      width: 60%;
+   }
+   .boton-3{
+      font-size: small;
+      width: 35%;
+      height: 3rem;
+   }
+   h3{
+      font-size: 2rem;
+   }
+   .text-2 {
+      font-size: medium;
+      margin: 3%;
+   }
+   .imagen-3{
+      height: 7rem;
+   }
+   .text-3 {
+      font-size: small;
+      text-align: justify;
+   }
+   .cont-5 {
+      width: 90%;
+   }
+   .publicacion {
+      width: 77%;
+   }
+   .post {
+      width: 73%;
+   }
+   .text-box-2 {
+      height: 0.9rem;
+   }
+   .comenta{
+      font-size: small;
+   }
+   .imagen-4 {
+      width: 17%;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+   }
+   .boton-4 {
+      width: 92%;
+      height: 1.2rem;
+      font-size: 0.7rem;
+   }
+   .boton-5{
+      width: 40%;
+       height: 1.2rem;
+       font-size: 0.7rem;
+   }
+   .publicacion-2{
+      width: 76%;
+   }
+   p {
+      font-size: small;
+   }
+   .form-2 {
+      width: 72%;
+      
+   }
+   .input{
+      width: 100%;
+       font-size: small;
+   }
+   .foto {
+      height: 8rem;
+      width: 8rem;
+      border-radius: 4rem;
+   }
+   /*footer*/
+   footer{
+      font-size: x-small;
+      height: 2rem;
+   }
+   }
+@media (min-width: 768px) and (max-width: 1024px) {
+   /*aqui empieza el header*/
+   
+   /*aqui empieza el main*/
+   .introduccion{
+      width: 100%;
+   }
+   .boton-3{    
+      width: 35%;
+      height: 5rem;
+  }
+   h4{
+      text-align: center;
+   }
+   .titulo-1{
+      max-height: 100%;
+      align-items: center;
+   }
+   .img-2 {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 60%;
+   }
+   .text-3 {
+      text-align: justify;
+   }
+   .cont-5 {
+      width: 90%;
+   }
+   .publicacion{
+      width: 50%;
+   }
+   .boton-4 {
+      font-size: 0.7rem;
+   
+   }
+   }
