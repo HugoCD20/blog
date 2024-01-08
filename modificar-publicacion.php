@@ -75,7 +75,7 @@
                             }
                         }
                         
-                         $id_publicacion=$_POST['id_publicacion'];
+                         $id_publicacion=$_POST['id_publicacion'];//este sirve para verificar que se haya enviado un id de la publicacion
                          if($id_publicacion==null){
                             header('location:blog.php');
                             exit();
@@ -85,7 +85,7 @@
                          $consulta2->bindParam(':id_publicacion',$id_publicacion);
                          $consulta2->execute();
                          if ($consulta2->rowCount() > 0) {
-                             while ($registro2 = $consulta2->fetch(PDO::FETCH_ASSOC)) {
+                             while ($registro2 = $consulta2->fetch(PDO::FETCH_ASSOC)) {//hace una consulta sobre la publicacion para imprimirla en los textbox
                                 $titulo=$registro2['titulo'];
                                 $texto=$registro2['texto'];
                                 

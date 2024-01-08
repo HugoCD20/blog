@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(isset($_SESSION['id'])){
+    if(isset($_SESSION['id'])){//verrifica que no este iniciada la sesion si es asi no deja entrar a esta pagina
         header('location:index.php');
     }
 ?>
@@ -52,7 +52,7 @@
                             }
 
                             // Filtrar el correo electrónico usando filter_var
-                            $correoFiltrado = filter_var($Correo, FILTER_VALIDATE_EMAIL);                        
+                            $correoFiltrado = filter_var($Correo, FILTER_VALIDATE_EMAIL);//ESTA FUNCION VALIDA QUE SEA UN CORREO ELECTRONICO                   
                             if ($correoFiltrado == false) {
                                 echo '<center> <p class="error">Correo no valido</p> </center>';
                             } 

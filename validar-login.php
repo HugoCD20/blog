@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $correo = $_POST['correo'];
             $contrasena = $_POST['contrasena'];
             $conexion->exec("SET CHARACTER SET utf8");
-            $query = "SELECT * FROM usuario WHERE correo=? AND contraseña=?";
+            $query = "SELECT * FROM usuario WHERE correo=? AND contraseña=?";//aqui verifique el inicio de sesion y tambien inicio sesion y guardo algunos valores
             $consulta = $conexion->prepare($query);
             $consulta->execute(array($correo, $contrasena));
             if ($consulta->rowCount() > 0) {

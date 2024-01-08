@@ -1,4 +1,4 @@
-<?php 
+<?php //este es para la conexion con el servidor
 $servidor = "localhost:3308";
 $usuario = "root";
 $password = "";

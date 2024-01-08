@@ -14,7 +14,7 @@
     function ejecutarAccion() {
       var select = document.getElementById("menuDesplegable");
       var opcionSeleccionada = select.value;
-      switch (opcionSeleccionada) {
+      switch (opcionSeleccionada) {//esto sirve para que cuando se seleccione una opcion de la lista desplegable se redireccione a otra pagina
         case 'opcion1':
           break;
         case 'opcion2':
@@ -40,7 +40,7 @@
         </div>
         <div class="cont-2">
             <?php
-            if (!isset($_SESSION['id'])){
+            if (!isset($_SESSION['id'])){//este sirve para verificar si se inicio sesion el !isset sirve para verificar si una variable existe o no
                 echo '<a class="inicio" href="login.php"><h2>Iniciar sesión</h2></a>';
             }else{
                 echo "<select class='seleccion-1' id='menuDesplegable' onchange='ejecutarAccion()'> 
@@ -83,7 +83,7 @@
                         }
                     ?>
                     <?php
-                        if(isset($_SESSION['id']) && $_SESSION['id']==$id_usuario){
+                        if(isset($_SESSION['id']) && $_SESSION['id']==$id_usuario){//esto sirve para mostrar el contenido siempre y cuando se haya iniciado sesion y se el propetario
                             echo "
                             <form class='publicacion' method='POST' action='Crear-publicacion.php'>
                                 <div class='imagen-4'>
@@ -99,7 +99,7 @@
                         }
                     ?>
                     <?php
-                         $query2="SELECT* FROM publicaciones WHERE id_blog=:id";
+                         $query2="SELECT* FROM publicaciones WHERE id_blog=:id";//esta consulta sirve para mostrar las publicaciones
                          $consulta2=$conexion->prepare($query2);
                          $consulta2->bindParam(':id',$id);
                          $consulta2->execute();
@@ -133,7 +133,7 @@
                                     </div>                        
                                 </form>
                                 ";
-                                $query3="SELECT * from comentarios where id_publicacion=:id";
+                                $query3="SELECT * from comentarios where id_publicacion=:id";//esta consulta sirve para mostrar los comentarios
                                 $consulta3=$conexion->prepare($query3);
                                 $consulta3->bindParam(':id',$registro2['id']);
                                 $consulta3->execute();

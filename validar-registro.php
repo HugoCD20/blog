@@ -66,7 +66,7 @@
 
     if(!empty($Correo) && !empty($Contraseña) && !empty($Contra) && !empty($Nusuario) && $valida && $cor && $largo && $ima){
         try {
-            include('conexion.php');
+            include('conexion.php');//sirver para registrarte en la pagina
             $nombreU = $_POST['nombre'];
             $correo = $_POST['correo'];
             $contrasena = $_POST['contrasena'];

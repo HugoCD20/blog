@@ -1,5 +1,5 @@
 <?php 
-$titulo=$_POST['titulo'];
+$titulo=$_POST['titulo'];//este codigo es igual al de actualizar-perfil.php
 $texto=$_POST['texto'];
 $id_publicacion=$_POST['id_publicacion'];
 include('conexion.php');

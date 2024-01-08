@@ -1,7 +1,7 @@
 <?php
     session_start();
     $_SESSION['pag']= 2;
-    $_SESSION['page']= 2;
+    $_SESSION['page']= 2;//indices de pagina
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,7 +17,7 @@
       switch (opcionSeleccionada) {
         case 'opcion1':
           break;
-        case 'opcion2':
+        case 'opcion2'://redirecciona
             window.location.href = 'perfil.php';
           break;
         case 'Blogs':

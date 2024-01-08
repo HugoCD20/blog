@@ -1,7 +1,7 @@
 <?php 
 session_start();
 $correo=$_POST['correo'];
-$contraseña=$_POST['contrasena'];
+$contraseña=$_POST['contrasena'];//aqui requerimos los parametros del formulario
 $nombre=$_POST['nombre'];
 $id=$_SESSION['id'];
 include('conexion.php');
@@ -9,8 +9,8 @@ $ima = true;
 $imagen = '';
 
 if(isset($_FILES['imagen']) && $_FILES['imagen']['error'] === UPLOAD_ERR_OK){
-$file = $_FILES['imagen'];
-$nombreF = $file["name"];
+$file = $_FILES['imagen'];// en este lado lo que se desmenuzamos las propiedades de las imagenes
+$nombreF = $file["name"];//como el nombre del archivo el tipo de foto
 $tipo = $file["type"];
 $size = $file["size"];
 $ruta_provisional = $file["tmp_name"];
@@ -25,13 +25,10 @@ $src = $carpeta . $nombreF;
 if ($tipo != "image/jpg" && $tipo != "image/png" && $tipo != "image/JPG" && $tipo != "image/jpeg") {
     echo "La imagen no es compatible";
     $ima = false;
-} elseif ($size > 3 * 1024 * 1024) {
+} elseif ($size > 3 * 1024 * 1024) {//aqui se validan algunas porpiedades de la imagen como el peso y que sea una imagen
     echo "La imagen es demasiado pesada";
     $ima = false;
-} /*elseif($with != 800 && $height != 800){
-    echo "-La imagen no cumple con el tamaño-";
-    $ima=false;
-}*/ else {
+} else {
     move_uploaded_file($ruta_provisional, $src);
     $imagen = "Fotos/" . $nombreF;
 }
@@ -44,7 +41,7 @@ $imagen = 'sin-imagen';
 $ima = false;
 }
 
-if ($ima) {
+if ($ima) {//aqui se actualiza la foto siempre y cuando las validaciones anteriores digan que es posicitivo
     $query = "UPDATE usuario SET foto=:imagen WHERE id=:id";
     $consulta2 = $conexion->prepare($query);
     $consulta2->bindParam(':imagen', $imagen);
@@ -57,7 +54,7 @@ if ($ima) {
     }
 }
 if(!empty($nombre)){
-    $query = "UPDATE usuario set nombre=:nombre where id=:id";
+    $query = "UPDATE usuario set nombre=:nombre where id=:id";//aqui se actualiza el nombre siempre y cuando no este vacio
     $consulta3 = $conexion->prepare($query);
     $consulta3->bindParam(':nombre',$nombre);
     $consulta3->bindParam(':id',$id);

@@ -1,9 +1,9 @@
 <?php
     session_start();
     if(!isset($_SESSION['id'])){
-        header('location:index.php');
+        header('location:index.php');//validar inicio de sesion
     }
-    $_SESSION['pag']= 5;
+    $_SESSION['pag']= 5;//indices de pagina
     $_SESSION['page']= 5;
 ?>
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <script>
     function ejecutarAccion() {
-      var select = document.getElementById("menuDesplegable");
+      var select = document.getElementById("menuDesplegable");//redireciona a diferentes paginas
       var opcionSeleccionada = select.value;
       switch (opcionSeleccionada) {
         case 'opcion1':
@@ -79,7 +79,7 @@
                         <label for="titulo">Titulo</label>
                         <input class="text-box1" type="text" name="titulo">
                         <?php 
-                            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                            if ($_SERVER["REQUEST_METHOD"] === "POST") {//sirve para verificar si esta vacio o si esta demasiado largo 
                                 if(isset($_POST['titulo'])){
                                     $titulo=$_POST['titulo'];
                                     $verifica=true;
@@ -98,7 +98,7 @@
                         <label for="texto">Ingresa el contenido:</label>
                         <textarea class="text-box2" name="texto"></textarea>
                         <?php 
-                            if ($_SERVER["REQUEST_METHOD"] === "POST") {
+                            if ($_SERVER["REQUEST_METHOD"] === "POST") {//verifica si esta vacio
                                 if(isset($_POST['texto'])){
                                     $texto=$_POST['texto'];
                                     if(empty($texto)){

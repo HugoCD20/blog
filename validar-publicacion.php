@@ -41,7 +41,7 @@ $ima = false;
 }
 $img='sin-imagen';
 if(isset($verifica)){
-    if($verifica){
+    if($verifica){//esta sirver para crear una publicacion
             $query2="INSERT INTO publicaciones(id_blog,titulo,texto,imagen)VALUES(:id,:titulo,:texto,:imagen)";
         $consulta2 = $conexion->prepare($query2);
         $consulta2->bindParam(':id', $id);

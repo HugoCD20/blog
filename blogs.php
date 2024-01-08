@@ -1,9 +1,9 @@
 <?php
     session_start();
-    if(!isset($_SESSION['id'])){
+    if(!isset($_SESSION['id'])){//esto sirve para verificar si se inicio sesion o no solo se puede acceder si iniciaste sesion
         header('location:index.php');
     }
-    $_SESSION['pag']=8;
+    $_SESSION['pag']=8;//este es un indice de pagina
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -60,7 +60,7 @@
         <div class="cont-3">
         <?php
             if(isset($_SESSION['page'])){
-                switch($_SESSION['page']){
+                switch($_SESSION['page']){//este parte es un menu en cual necesita la entrada del indice de pagina y dependiendo de donde se envie direcciona a diferentes paginas
                     case 1:
                         echo '<a class="regreso" href="index.php">';
                         break;

@@ -4,7 +4,7 @@
         header('location:index.php');
     }
     $_SESSION['pag']= 7;
-    $_SESSION['page']= 7;
+    $_SESSION['page']= 7;//indices de pagina
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <script>
     function ejecutarAccion() {
-      var select = document.getElementById("menuDesplegable");
+      var select = document.getElementById("menuDesplegable");//redirecciona
       var opcionSeleccionada = select.value;
       switch (opcionSeleccionada) {
         case 'opcion1':

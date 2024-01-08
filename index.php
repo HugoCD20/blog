@@ -1,7 +1,7 @@
 <?php
 session_start();
 $_SESSION['pag']=1;
-$_SESSION['page']=1;
+$_SESSION['page']=1;//indice de pagina
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +13,7 @@ $_SESSION['page']=1;
     <script>
     function ejecutarAccion() {
       var select = document.getElementById("menuDesplegable");
-      var opcionSeleccionada = select.value;
+      var opcionSeleccionada = select.value;//redirecciona
       switch (opcionSeleccionada) {
         case 'opcion1':
           break;

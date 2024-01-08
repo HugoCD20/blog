@@ -1,10 +1,10 @@
 <?php
     session_start();
-    if(!isset($_SESSION['id'])){
+    if(!isset($_SESSION['id'])){//verifica si inicio sesion
         header('location:index.php');
     }
     $_SESSION['pag']= 4;
-    $_SESSION['page']= 4;
+    $_SESSION['page']= 4;//indices de pagina
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <script>
     function ejecutarAccion() {
-      var select = document.getElementById("menuDesplegable");
+      var select = document.getElementById("menuDesplegable");//redirecciona a diferentes paginas segun la opcion elegida
       var opcionSeleccionada = select.value;
       switch (opcionSeleccionada) {
         case 'opcion1':
